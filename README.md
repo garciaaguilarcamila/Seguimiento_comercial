@@ -1,6 +1,4 @@
-# 🤖 Automatización 4 — Seguimiento Comercial Automático
-
-> **Sagatech** · Automatizaciones para empresas reales
+# 🤖 Seguimiento Comercial Automático
 
 Secuencia automática de follow-up para leads en múltiples fases. El sistema detecta contactos nuevos, envía el primer email, lanza recordatorios progresivos al comercial por Gmail y Telegram, escala si no hay respuesta y cierra por inactividad. Todo queda registrado en Google Sheets sin intervención manual.
 
