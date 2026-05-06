@@ -25,7 +25,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -53,7 +53,7 @@
       "name": "Get row(s) in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -97,7 +97,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -286,14 +286,14 @@
       "name": "Update row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
     },
     {
       "parameters": {
-        "sendTo": "=pepitasagatech@gmail.com",
+        "sendTo": "=comercial@tuempresa.com",
         "subject": "=Hemos recibido tu consulta, {{ $json.nombre }}",
         "message": "=Hola {{ $json.nombre }},\n\nGracias por contactar con nosotros. Hemos recibido tu mensaje\ny uno de nuestros comerciales se pondrá en contacto contigo\nen las próximas horas.\n\nReferencia de tu consulta: {{ $json.id }}\n\nUn saludo,\nEl equipo comercial",
         "options": {}
@@ -309,7 +309,7 @@
       "webhookId": "c346eeef-c36c-4766-a31a-7949eaef0b5b",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JKP7byrrjyajOMMc",
+          "id": "TU_CREDENTIAL_ID_GMAIL",
           "name": "Gmail account"
         }
       }
@@ -333,7 +333,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -361,7 +361,7 @@
       "name": "Get row(s) in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -404,7 +404,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -590,14 +590,14 @@
       "name": "Update row in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
     },
     {
       "parameters": {
-        "chatId": "8701550812",
+        "chatId": "TU_CHAT_ID",
         "text": "=⚠️ Lead pendiente: {{ $json.nombre }} ({{ $json.empresa }})              📧 {{ $json.email }} | 📞 {{ $json.telefono }}              🕐 Lleva más de 24h sin atender              ID: {{ $json.id }}",
         "additionalFields": {}
       },
@@ -612,16 +612,16 @@
       "webhookId": "07929573-8c72-4871-9018-399388d438f7",
       "credentials": {
         "telegramApi": {
-          "id": "SQJvaTypLChYxRBf",
+          "id": "TU_CREDENTIAL_ID_TELEGRAM",
           "name": "Telegram account"
         }
       }
     },
     {
       "parameters": {
-        "sendTo": "pepitasagatech@gmail.com",
+        "sendTo": "comercial@tuempresa.com",
         "subject": "=⚠️ Lead sin atender - {{ $json.nombre }} ({{ $json.empresa }})",
-        "message": "=Hola,  El lead {{ $json.id }} lleva más de 24h sin ser atendido.  Datos: - Nombre:        {{ $json.nombre }} - Empresa:       {{ $json.empresa }} - Email:         {{ $json.email }} - Teléfono:      {{ $json.telefono }} - Origen:        {{ $json.origen }} - Fecha entrada: {{ $json.fecha_entrada }}  Por favor, contacta con él cuanto antes. Accede a la hoja: https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0  ",
+        "message": "=Hola,  El lead {{ $json.id }} lleva más de 24h sin ser atendido.  Datos: - Nombre:        {{ $json.nombre }} - Empresa:       {{ $json.empresa }} - Email:         {{ $json.email }} - Teléfono:      {{ $json.telefono }} - Origen:        {{ $json.origen }} - Fecha entrada: {{ $json.fecha_entrada }}  Por favor, contacta con él cuanto antes. Accede a la hoja: https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit  ",
         "options": {}
       },
       "type": "n8n-nodes-base.gmail",
@@ -635,7 +635,7 @@
       "webhookId": "1a6172e3-4d81-4922-bd4d-8a6f5f758e3d",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JKP7byrrjyajOMMc",
+          "id": "TU_CREDENTIAL_ID_GMAIL",
           "name": "Gmail account"
         }
       }
@@ -645,7 +645,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -833,7 +833,7 @@
       "name": "Update row in sheet2",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -857,7 +857,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -885,7 +885,7 @@
       "name": "Get row(s) in sheet2",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -926,9 +926,9 @@
     },
     {
       "parameters": {
-        "sendTo": "pepitasagatech@gmail.com",
+        "sendTo": "comercial@tuempresa.com",
         "subject": "=🚨 URGENTE - Lead {{ $json.nombre }} sin atender 72h",
-        "message": "=Hola,\n\nEl lead {{ $json.id }} lleva más de 72h sin ser atendido\ny ha sido escalado automáticamente.\n\nDatos del lead:\n- Nombre:        {{ $json.nombre }}\n- Empresa:       {{ $json.empresa }}\n- Email:         {{ $json.email }}\n- Teléfono:      {{ $json.telefono }}\n- Fecha entrada: {{ $json.fecha_entrada }}\n- Intentos:      {{ $json.intentos }}\n\nEl estado ha sido cambiado a ESCALADO.\nSe requiere acción inmediata.\n\n<a href=\"https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit\">Ver hoja de seguimiento</a>\n",
+        "message": "=Hola,\n\nEl lead {{ $json.id }} lleva más de 72h sin ser atendido\ny ha sido escalado automáticamente.\n\nDatos del lead:\n- Nombre:        {{ $json.nombre }}\n- Empresa:       {{ $json.empresa }}\n- Email:         {{ $json.email }}\n- Teléfono:      {{ $json.telefono }}\n- Fecha entrada: {{ $json.fecha_entrada }}\n- Intentos:      {{ $json.intentos }}\n\nEl estado ha sido cambiado a ESCALADO.\nSe requiere acción inmediata.\n\n<a href=\"https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit\">Ver hoja de seguimiento</a>\n",
         "options": {}
       },
       "type": "n8n-nodes-base.gmail",
@@ -942,7 +942,7 @@
       "webhookId": "25691eb2-be22-4e46-ae97-f062af6ada28",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JKP7byrrjyajOMMc",
+          "id": "TU_CREDENTIAL_ID_GMAIL",
           "name": "Gmail account"
         }
       }
@@ -952,7 +952,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1141,7 +1141,7 @@
       "name": "Update row in sheet3",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -1165,7 +1165,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1193,7 +1193,7 @@
       "name": "Get row(s) in sheet3",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -1237,7 +1237,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1425,14 +1425,14 @@
       "name": "Update row in sheet4",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
     },
     {
       "parameters": {
-        "sendTo": "pepitasagatech@gmail.com",
+        "sendTo": "comercial@tuempresa.com",
         "subject": "=Lead {{ $json.nombre }} cerrado por inactividad",
         "message": "=Hola,  El lead {{ $json.id }} lleva más de 72h sin ser atendido y ha sido escalado automáticamente.  Datos del lead: - Nombre:        {{ $json.nombre }} - Empresa:       {{ $json.empresa }} - Email:         {{ $json.email }} - Teléfono:      {{ $json.telefono }} - Fecha entrada: {{ $json.fecha_entrada }} - Intentos:      {{ $json.intentos }}  El estado ha sido cambiado a ESCALADO. Se requiere acción inmediata.  Accede a la hoja: https://docs.google.com/spreadsheets/d/TU_ID_AQUI  Sistema automático Sagatech",
         "options": {}
@@ -1448,7 +1448,7 @@
       "webhookId": "6c56a96a-6074-4549-90e2-e804aaed2730",
       "credentials": {
         "gmailOAuth2": {
-          "id": "JKP7byrrjyajOMMc",
+          "id": "TU_CREDENTIAL_ID_GMAIL",
           "name": "Gmail account"
         }
       }
@@ -1458,7 +1458,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1645,14 +1645,14 @@
       "name": "Update row in sheet5",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
     },
     {
       "parameters": {
-        "chatId": "8701550812",
+        "chatId": "TU_CHAT_ID",
         "text": "=🚨 URGENTE — Lead sin atender 72h 👤 {{ $json.nombre }} — {{ $json.empresa }} 📧 {{ $json.email }} Estado cambiado a ESCALADO automáticamente. Requiere acción inmediata. ID: {{ $json.id }}",
         "additionalFields": {}
       },
@@ -1667,14 +1667,14 @@
       "webhookId": "91c6d56d-00ac-4028-b65a-6676b5d2de00",
       "credentials": {
         "telegramApi": {
-          "id": "SQJvaTypLChYxRBf",
+          "id": "TU_CREDENTIAL_ID_TELEGRAM",
           "name": "Telegram account"
         }
       }
     },
     {
       "parameters": {
-        "chatId": "8701550812",
+        "chatId": "TU_CHAT_ID",
         "text": "=🚨 URGENTE — Lead sin atender 72h                    👤 {{ $json.nombre }} — {{ $json.empresa }}                    📧 {{ $json.email }}                    Estado cambiado a ESCALADO automáticamente.                    Requiere acción inmediata.                    ID: {{ $json.id }}",
         "additionalFields": {}
       },
@@ -1689,7 +1689,7 @@
       "webhookId": "5cffa898-37f4-46eb-b79d-83ebcc9af220",
       "credentials": {
         "telegramApi": {
-          "id": "SQJvaTypLChYxRBf",
+          "id": "TU_CREDENTIAL_ID_TELEGRAM",
           "name": "Telegram account"
         }
       }
@@ -1698,7 +1698,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1726,7 +1726,7 @@
       "name": "Get row(s) in sheet4",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -1735,7 +1735,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1763,7 +1763,7 @@
       "name": "Get row(s) in sheet5",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -1773,7 +1773,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -1960,7 +1960,7 @@
       "name": "Update row in sheet6",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -1989,7 +1989,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -2017,7 +2017,7 @@
       "name": "Get row(s) in sheet6",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -2027,7 +2027,7 @@
         "operation": "update",
         "documentId": {
           "__rl": true,
-          "value": "https://docs.google.com/spreadsheets/d/1Rb4SL2_nf6_ZHjsomjigtHkkOdrnW0OKqK35XPXPUHs/edit?gid=0#gid=0",
+          "value": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID/edit",
           "mode": "url"
         },
         "sheetName": {
@@ -2216,7 +2216,7 @@
       "name": "Update row in sheet7",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "ZL4IngF0c4bQC5tD",
+          "id": "TU_CREDENTIAL_ID_SHEETS",
           "name": "Google Sheets CRM"
         }
       }
@@ -2541,8 +2541,8 @@
   "versionId": "d78b9496-0ebf-4ba3-8f60-f75a5da1b74b",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "95da355b11989f968139c1e95795a154c084c50d48c426c7ab972227d78c6fe5"
+    "instanceId": "TU_INSTANCE_ID"
   },
-  "id": "kAmcw3JBP-iV7JV0uL1Lp",
+  "id": "TU_WORKFLOW_ID",
   "tags": []
 }
