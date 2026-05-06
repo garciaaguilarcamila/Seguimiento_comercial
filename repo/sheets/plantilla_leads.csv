@@ -1,0 +1,4 @@
+id,nombre,empresa,email,telefono,origen,estado,fase,fecha_entrada,fecha_ultimo_contacto,fecha_cierre,notas,comercial,intentos
+LEAD-001,Ana García,Empresa Test S.L.,ana@empresatest.com,600 111 222,Web,NUEVO,,,,,, comercial@empresa.com,
+LEAD-002,Carlos López,Otra Empresa S.A.,carlos@otraempresa.com,600 333 444,Referido,NUEVO,,,,,, comercial@empresa.com,
+LEAD-003,Pedro Martínez,Empresa Escalado S.L.,pedro@escalado.com,600 555 666,Feria,NUEVO,,,,,, comercial@empresa.com,

@@ -1,0 +1,63 @@
+{
+  "name": "Reactivación de Leads",
+  "descripcion": "Detecta leads con estado REACTIVADO y los resetea a NUEVO para que el workflow principal los vuelva a procesar",
+  "instrucciones_importacion": [
+    "1. En n8n ve a Workflows → Import from file",
+    "2. Selecciona este archivo",
+    "3. Actualiza las credenciales de Google Sheets en ambos nodos",
+    "4. Actualiza la URL del spreadsheet en ambos nodos",
+    "5. Activa el workflow"
+  ],
+  "nodos": [
+    {
+      "nodo": 1,
+      "tipo": "Schedule Trigger",
+      "configuracion": {
+        "triggerInterval": "minutes",
+        "minutesBetweenTriggers": 1
+      }
+    },
+    {
+      "nodo": 2,
+      "tipo": "Google Sheets - Get Row(s)",
+      "configuracion": {
+        "credencial": "Google Sheets CRM",
+        "operation": "getRows",
+        "documentMode": "url",
+        "sheetName": "Leads",
+        "filtros": {
+          "columna": "estado",
+          "valor": "REACTIVADO"
+        }
+      }
+    },
+    {
+      "nodo": 3,
+      "tipo": "IF",
+      "configuracion": {
+        "condicion": "{{ $json.id }} is not empty",
+        "rama_true": "Continúa al Update Row",
+        "rama_false": "Termina (no hay leads reactivados)"
+      }
+    },
+    {
+      "nodo": 4,
+      "tipo": "Google Sheets - Update Row",
+      "configuracion": {
+        "credencial": "Google Sheets CRM",
+        "operation": "updateRow",
+        "documentMode": "url",
+        "sheetName": "Leads",
+        "matchColumn": "id",
+        "matchValue": "{{ $json.id }}",
+        "camposActualizar": {
+          "estado": "NUEVO",
+          "fase": "1",
+          "intentos": "0",
+          "notas": "Lead reactivado manualmente",
+          "fecha_cierre": ""
+        }
+      }
+    }
+  ]
+}

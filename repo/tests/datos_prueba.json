@@ -1,0 +1,146 @@
+{
+  "descripcion": "Datos de prueba para los 5 casos de uso del workflow de seguimiento comercial",
+  "instrucciones": "Copia cada caso en tu hoja de Google Sheets para probar el flujo correspondiente. Recuerda reducir los tiempos de espera en los nodos Wait a 1-2 minutos para las pruebas.",
+
+  "casos_de_prueba": [
+
+    {
+      "caso": 1,
+      "nombre_caso": "Lead atendido antes del primer recordatorio",
+      "descripcion": "El comercial atiende el lead antes de que pasen las 24h. El flujo debe terminar sin enviar avisos.",
+      "accion_manual": "Después de recibir el email de bienvenida, cambia el estado a ATENDIDO en Sheets antes de que expire el Wait.",
+      "datos": {
+        "id": "LEAD-001",
+        "nombre": "Ana García",
+        "empresa": "Empresa Test S.L.",
+        "email": "tu@email.com",
+        "telefono": "600 111 222",
+        "origen": "Web",
+        "estado": "NUEVO",
+        "fase": "",
+        "fecha_entrada": "",
+        "fecha_ultimo_contacto": "",
+        "fecha_cierre": "",
+        "notas": "",
+        "comercial": "comercial@empresa.com",
+        "intentos": ""
+      },
+      "resultado_esperado": {
+        "estado_final": "ATENDIDO",
+        "emails_enviados": ["Email bienvenida al lead"],
+        "telegram_enviados": [],
+        "notas_finales": "Atendido antes del primer recordatorio"
+      }
+    },
+
+    {
+      "caso": 2,
+      "nombre_caso": "Lead que necesita primer recordatorio",
+      "descripcion": "El comercial no atiende en 24h. El sistema envía aviso por Gmail y Telegram.",
+      "accion_manual": "No toques nada en Sheets. Deja pasar el Wait y verifica que llegan los avisos.",
+      "datos": {
+        "id": "LEAD-002",
+        "nombre": "Carlos López",
+        "empresa": "Otra Empresa S.A.",
+        "email": "tu@email.com",
+        "telefono": "600 333 444",
+        "origen": "Referido",
+        "estado": "NUEVO",
+        "fase": "",
+        "fecha_entrada": "",
+        "fecha_ultimo_contacto": "",
+        "fecha_cierre": "",
+        "notas": "",
+        "comercial": "comercial@empresa.com",
+        "intentos": ""
+      },
+      "resultado_esperado": {
+        "estado_final": "EN PROCESO",
+        "fase_final": 2,
+        "intentos_final": 1,
+        "emails_enviados": ["Email bienvenida al lead", "Aviso al comercial"],
+        "telegram_enviados": ["Aviso al comercial"],
+        "notas_finales": ""
+      }
+    },
+
+    {
+      "caso": 3,
+      "nombre_caso": "Lead que escala a urgente",
+      "descripcion": "El comercial no atiende en 72h. El sistema escala con aviso urgente.",
+      "accion_manual": "No toques nada en Sheets en ningún momento.",
+      "datos": {
+        "id": "LEAD-003",
+        "nombre": "Pedro Martínez",
+        "empresa": "Empresa Escalado S.L.",
+        "email": "tu@email.com",
+        "telefono": "600 555 666",
+        "origen": "Feria",
+        "estado": "NUEVO",
+        "fase": "",
+        "fecha_entrada": "",
+        "fecha_ultimo_contacto": "",
+        "fecha_cierre": "",
+        "notas": "",
+        "comercial": "comercial@empresa.com",
+        "intentos": ""
+      },
+      "resultado_esperado": {
+        "estado_final": "ESCALADO",
+        "fase_final": 3,
+        "intentos_final": 2,
+        "emails_enviados": ["Email bienvenida al lead", "Aviso al comercial", "Email urgente al responsable"],
+        "telegram_enviados": ["Aviso al comercial", "Mensaje urgente"],
+        "notas_finales": ""
+      }
+    },
+
+    {
+      "caso": 4,
+      "nombre_caso": "Lead cerrado por inactividad",
+      "descripcion": "Nadie atiende el lead en todo el proceso. Se cierra automáticamente.",
+      "accion_manual": "Continúa el LEAD-003 del caso 3 sin tocarlo hasta el final.",
+      "datos": {
+        "id": "LEAD-003",
+        "nota": "Usa el mismo lead del caso 3 sin tocar nada"
+      },
+      "resultado_esperado": {
+        "estado_final": "CERRADO",
+        "fase_final": 3,
+        "emails_enviados": ["Email bienvenida", "Aviso comercial", "Urgente responsable", "Notificación cierre"],
+        "telegram_enviados": ["Aviso comercial", "Mensaje urgente"],
+        "fecha_cierre": "Se rellena automáticamente",
+        "notas_finales": "Cerrado automáticamente por inactividad"
+      }
+    },
+
+    {
+      "caso": 5,
+      "nombre_caso": "Reactivar un lead cerrado",
+      "descripcion": "El lead CERRADO se reactiva manualmente. El sistema lo procesa de nuevo desde el principio.",
+      "accion_manual": "Cambia el estado del LEAD-003 a REACTIVADO en Sheets. El workflow de reactivación lo detecta y lo resetea a NUEVO.",
+      "datos": {
+        "id": "LEAD-003",
+        "campo_a_modificar": "estado",
+        "valor_nuevo": "REACTIVADO",
+        "nota": "Solo modifica la columna estado, deja el resto como está"
+      },
+      "resultado_esperado": {
+        "estado_tras_reactivacion": "NUEVO",
+        "fase_tras_reactivacion": 1,
+        "intentos_tras_reactivacion": 0,
+        "notas_tras_reactivacion": "Lead reactivado manualmente",
+        "siguiente_paso": "El workflow principal lo detecta y vuelve a procesar desde el principio"
+      }
+    }
+
+  ],
+
+  "checklist_verificacion": [
+    "¿Llegó el email correcto a la bandeja de entrada?",
+    "¿Llegó el mensaje de Telegram correcto?",
+    "¿El estado en Sheets se actualizó correctamente?",
+    "¿Los campos fase, intentos y fecha_ultimo_contacto se actualizaron?",
+    "¿El flujo terminó en el nodo correcto según el caso?"
+  ]
+}

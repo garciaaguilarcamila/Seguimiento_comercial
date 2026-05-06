@@ -1,0 +1,51 @@
+# Configuración real (nunca subir al repo)
+config.json
+
+# Credenciales y secretos
+*.env
+.env
+.env.local
+secrets.json
+credentials.json
+
+# Workflows con datos reales (exportar versión limpia)
+# workflow/seguimiento_comercial_REAL.json
+
+# Sistemas operativos
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Node (por si se añade algún script)
+node_modules/
+package-lock.json
+
+# Python (por si se añade algún script)
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+venv/
+.venv/
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/

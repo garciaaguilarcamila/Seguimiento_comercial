@@ -1,0 +1,49 @@
+{
+  "proyecto": "Automatización 4 — Seguimiento Comercial",
+  "version": "1.0.0",
+
+  "google_sheets": {
+    "spreadsheet_url": "https://docs.google.com/spreadsheets/d/TU_SPREADSHEET_ID_AQUI/edit",
+    "spreadsheet_id": "TU_SPREADSHEET_ID_AQUI",
+    "sheet_name": "Leads",
+    "credencial_n8n": "Google Sheets CRM"
+  },
+
+  "gmail": {
+    "credencial_n8n": "Gmail account",
+    "from_name": "Equipo Comercial",
+    "from_email": "tu@empresa.com",
+    "email_comercial": "comercial@empresa.com",
+    "email_responsable": "responsable@empresa.com"
+  },
+
+  "telegram": {
+    "credencial_n8n": "Telegram account",
+    "bot_token": "TU_BOT_TOKEN_AQUI",
+    "chat_id_comercial": "TU_CHAT_ID_AQUI",
+    "chat_id_responsable": "CHAT_ID_RESPONSABLE_AQUI"
+  },
+
+  "tiempos": {
+    "intervalo_trigger_minutos": 1,
+    "espera_primer_recordatorio_horas": 24,
+    "espera_segundo_recordatorio_horas": 48,
+    "espera_cierre_inactividad_horas": 72,
+    "nota": "Para pruebas cambia las horas a minutos en los nodos Wait de n8n"
+  },
+
+  "estados": {
+    "nuevo": "NUEVO",
+    "en_proceso": "EN PROCESO",
+    "escalado": "ESCALADO",
+    "cerrado": "CERRADO",
+    "atendido": "ATENDIDO",
+    "reactivado": "REACTIVADO",
+    "nota": "Estos valores deben coincidir exactamente con los que uses en Google Sheets y en los nodos IF de n8n"
+  },
+
+  "workflows_n8n": {
+    "principal": "seguimiento_comercial.json",
+    "reactivacion": "reactivacion_leads.json"
+  }
+}

@@ -1,0 +1,100 @@
+===== PLANTILLA 1: EMAIL PRIMER CONTACTO AL LEAD =====
+
+Asunto: Hemos recibido tu consulta, {{ $json.nombre }}
+
+Hola {{ $json.nombre }},
+
+Gracias por contactar con nosotros. Hemos recibido tu mensaje
+y uno de nuestros comerciales se pondrá en contacto contigo
+en las próximas horas.
+
+Referencia de tu consulta: {{ $json.id }}
+
+Un saludo,
+El equipo comercial
+
+
+===== PLANTILLA 2: EMAIL AVISO AL COMERCIAL =====
+
+Asunto: ⚠️ Lead sin atender - {{ $json.nombre }} ({{ $json.empresa }})
+
+Hola,
+
+El lead {{ $json.id }} lleva más de 24h sin ser atendido.
+
+Datos:
+- Nombre:        {{ $json.nombre }}
+- Empresa:       {{ $json.empresa }}
+- Email:         {{ $json.email }}
+- Teléfono:      {{ $json.telefono }}
+- Origen:        {{ $json.origen }}
+- Fecha entrada: {{ $json.fecha_entrada }}
+
+Por favor, contacta con él cuanto antes.
+Accede a la hoja: [URL_DE_TU_SHEET]
+
+Un saludo,
+Sistema automático
+
+
+===== PLANTILLA 3: EMAIL URGENTE AL RESPONSABLE =====
+
+Asunto: 🚨 URGENTE - Lead {{ $json.nombre }} sin atender 72h
+
+Hola,
+
+El lead {{ $json.id }} lleva más de 72h sin ser atendido
+y ha sido escalado automáticamente.
+
+Datos del lead:
+- Nombre:        {{ $json.nombre }}
+- Empresa:       {{ $json.empresa }}
+- Email:         {{ $json.email }}
+- Teléfono:      {{ $json.telefono }}
+- Fecha entrada: {{ $json.fecha_entrada }}
+- Intentos:      {{ $json.intentos }}
+
+El estado ha sido cambiado a ESCALADO.
+Se requiere acción inmediata.
+
+Accede a la hoja: [URL_DE_TU_SHEET]
+
+Sistema automático Sagatech
+
+
+===== PLANTILLA 4: TELEGRAM AVISO AL COMERCIAL =====
+
+⚠️ Lead pendiente: {{ $json.nombre }} ({{ $json.empresa }})
+📧 {{ $json.email }} | 📞 {{ $json.telefono }}
+🕐 Lleva más de 24h sin atender
+ID: {{ $json.id }}
+
+
+===== PLANTILLA 5: TELEGRAM URGENTE =====
+
+🚨 URGENTE — Lead sin atender 72h
+👤 {{ $json.nombre }} — {{ $json.empresa }}
+📧 {{ $json.email }}
+Estado cambiado a ESCALADO automáticamente.
+Requiere acción inmediata.
+ID: {{ $json.id }}
+
+
+===== PLANTILLA 6: EMAIL CIERRE POR INACTIVIDAD =====
+
+Asunto: Lead {{ $json.nombre }} cerrado por inactividad
+
+Hola,
+
+El lead {{ $json.id }} ha sido cerrado automáticamente
+por inactividad tras no recibir atención.
+
+Datos:
+- Nombre:      {{ $json.nombre }}
+- Empresa:     {{ $json.empresa }}
+- Fecha cierre: {{ $json.fecha_cierre }}
+
+Si deseas reactivarlo, cambia el estado a REACTIVADO
+en la hoja de seguimiento.
+
+Sistema automático Sagatech
