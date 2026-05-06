@@ -1,26 +1,8 @@
 # 🤖 Automatización 4 — Seguimiento Comercial Automático
 
+> **Sagatech** · Automatizaciones para empresas reales
+
 Secuencia automática de follow-up para leads en múltiples fases. El sistema detecta contactos nuevos, envía el primer email, lanza recordatorios progresivos al comercial por Gmail y Telegram, escala si no hay respuesta y cierra por inactividad. Todo queda registrado en Google Sheets sin intervención manual.
-
----
-
-## 📸 Capturas del sistema funcionando
-
-### Workflow completo en n8n
-![Workflow completo](assets/WORKFLOW_COMPLETO.jpg)
-
-### Google Sheets — Registro de leads
-![Google Sheets](assets/Google_sheet.jpg)
-
-### Emails generados automáticamente
-
-| Primer contacto | Aviso al comercial |
-|---|---|
-| ![Email 1](assets/Email1.jpg) | ![Email 2](assets/Email2.jpg) |
-
-| Escalado urgente | Cierre por inactividad |
-|---|---|
-| ![Email 3](assets/Email3.jpg) | ![Email 4](assets/Email4.jpg) |
 
 ---
 
@@ -105,8 +87,6 @@ automatizacion-4-seguimiento-comercial/
 │   ├── guia_configuracion.md         ← configuración paso a paso
 │   ├── guia_replicacion.md           ← cómo replicarlo en otro cliente
 │   └── control_errores_logs.md       ← errores frecuentes y soluciones
-├── 📁 assets/
-│   └── *.jpg                         ← capturas de pantalla
 ├── config.example.json               ← configuración de ejemplo
 ├── .gitignore
 └── README.md
@@ -118,7 +98,7 @@ automatizacion-4-seguimiento-comercial/
 
 ```bash
 # 1. Clona el repositorio
-git clone https://github.com/TU_USUARIO/automatizacion-4-seguimiento-comercial.git
+git clone https://github.com/garciaaguilarcamila/Seguimiento_comercial.git
 
 # 2. Copia y rellena la configuración
 cp config.example.json config.json
@@ -161,3 +141,7 @@ Luego:
 
 ---
 
+## 👩‍💻 Desarrollado por
+
+**Sagatech** — Automatizaciones para empresas reales  
+Proyecto académico · Curso de automatización con n8n
